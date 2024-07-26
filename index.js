@@ -1,6 +1,5 @@
 require('dotenv').config()
 
-require('./DB/connection')
 
 
 const express=require('express')
@@ -14,6 +13,9 @@ const cors=require('cors')
 // create server
 
 const dropCartserver=express()
+
+require('./DB/connection')
+
 
 dropCartserver.use(cors())
 
