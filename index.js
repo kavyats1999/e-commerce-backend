@@ -27,6 +27,6 @@ dropCartserver.listen(PORT,()=>{
     console.log(`dropcart server listening at port ${PORT}`);
 })
 
-dropCartserver.get('/',(req,res)=>{
-    res.status(200).send('<h1>dropcart server connected successfully waiting for request</h1>')
-})
+// dropCartserver.get('/',(req,res)=>{
+//     res.status(200).send('<h1>dropcart server connected successfully waiting for request</h1>')
+// })
