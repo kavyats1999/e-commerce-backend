@@ -31,19 +31,9 @@ const ladiesSchema=new mongoose.Schema({
     image:{
         type:String,
         required:true
-    },
-
-    rating:{
-        rate:{
-            type:Number,
-            required:true
-        },
-
-        count:{
-            type:Number,
-            required:true
-        }
     }
+
+   
 })
 
 const ladies=mongoose.model('ladies',ladiesSchema)

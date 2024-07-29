@@ -29,3 +29,13 @@ exports.addAddressController = async (req, res) => {
         res.status(400).json({ err: 'Failed to save address', details: err.message });
     }
 };
+
+
+exports.getallAddressController=async(req,res)=>{
+    try{
+        const allAddress=await addresses.find()
+        res.status(200).json(allAddress)
+    }catch(err){
+        res.status(401).json(err)
+    }
+}

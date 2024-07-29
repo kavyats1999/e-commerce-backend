@@ -34,3 +34,13 @@ exports.addContactController = async (req, res) => {
         res.status(400).json({ error: 'Failed to save contact', details: err.message });
     }
 };
+
+
+exports.getallContactsController=async (req,res)=>{
+    try{
+        const allContacts=await contacts.find()
+        res.status(200).json(allContacts)
+    }catch(err){
+        res.status(401).json(err)
+    }
+}

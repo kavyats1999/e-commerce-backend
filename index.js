@@ -8,14 +8,14 @@ const router=require('./Routes/router')
 
 
 const cors=require('cors')
-
+const bodyParser = require('body-parser');
 
 // create server
 
 const dropCartserver=express()
 
 require('./DB/connection')
-
+dropCartserver.use(bodyParser.json()); 
 
 dropCartserver.use(cors())
 
